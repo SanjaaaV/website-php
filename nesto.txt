@@ -1,0 +1,6 @@
+.nav ul ul ul li {   /*ovo je onaj deo kad imamo duplo padajuce */
+position: relative;
+top:-60px;
+/* has to be the same number as the "width" of "nav ul ul li" */
+left:170px;
+}

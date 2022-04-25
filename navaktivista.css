@@ -1,0 +1,115 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+html {
+ height: 100%;
+ box-sizing: border-box;
+}
+
+
+body {
+	 box-sizing: inherit;
+	position: relative;
+	margin: 0;
+	padding-bottom: 3rem;
+	min-height:100%;
+	background-color:Linen;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#okvir {
+ margin: 0 auto;
+ box-sizing: inherit;
+ background-color:white;
+}
+
+.header {
+	padding:15px;
+	background-color:darkslategrey;
+	text-align:left;
+	color:white;
+}
+
+.nav {
+	background-color:LightGray;
+	color:white;
+	padding:10px;
+	text-align:center;
+}
+
+.nav a:hover {
+  color: white;
+}
+
+.nav:after {
+content:"";
+display:table;
+clear:both;
+}
+.nav ul {
+float: left;
+padding:0;
+margin:0;
+list-style: none;
+position: relative;
+}
+.nav ul li {
+margin: 0px;
+display:inline-block;
+float: left;
+background-color: lightgrey;
+}
+.nav a {
+display:block;
+padding:14px 30px;
+color:darkslategrey;
+font-size:20px;
+text-decoration:none;
+}
+.nav ul li ul li:hover { background-color:lightslategrey; }
+
+.nav ul ul {
+display: none;
+position: absolute;
+top: 50px;
+}
+.nav ul li:hover > ul {
+display:inherit;
+}        /*ovaj deo je za padajuci meni */
+.nav ul ul li {
+width:170px;
+float:none;
+display:list-item;    /*ovaj deo je da lista koja pada bude u koloni */
+position: relative;
+background-color:darkslategrey;
+}
+
+.nav ul ul li a {
+	color:white;
+}
+
+
+
+.li > a:after { content: ' +'; }
+.li > a:only-child:after { content: ''; }
+.toggle,
+[id^=drop] {
+display: none;
+}
+
+
+
+
+.futer {
+ position:absolute;
+ box-sizing: inherit;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ padding: 1rem;
+ text-align: center;
+ background-color:DarkSlateGrey;
+}
+

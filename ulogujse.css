@@ -1,0 +1,126 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+html {
+ height: 100%;
+ box-sizing: border-box;
+}
+
+
+body {
+	 box-sizing: inherit;
+	position: relative;
+	margin: 0;
+	padding-bottom: 3rem;
+	min-height:100%;
+	background-color:Linen;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#okvir {
+ margin: 0 auto;
+ box-sizing: inherit;
+ background-color:white;
+}
+
+.header {
+	padding:15px;
+	background-color:darkslategrey;
+	text-align:left;
+	color:white;
+}
+
+.nav {
+	background-color:LightGray;
+	color:white;
+	padding:30px;
+	text-align:center;
+}
+
+.nav ul {
+float: left;
+padding:0;
+margin:0;
+list-style: none;
+position: relative;
+}
+.nav ul li {
+margin: 0px;
+float: left;
+color: darkslategrey;
+}
+
+.nav a {
+display:block;
+padding: 0 14px;
+color:darkslategrey;
+font-size:20px;
+text-decoration:none;
+
+}
+.nav a:hover {
+  color: white;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px){
+	.flex-container{
+			flex-direction: column;
+		}
+	}
+	
+	
+	
+
+h1{
+	font-size: 25px;
+}
+
+
+
+
+.futer {
+ position:absolute;
+ box-sizing: inherit;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ padding: 1rem;
+ text-align: center;
+ background-color:DarkSlateGrey;
+}
+
+#logovanje {
+	padding: 30px;
+	border: 2px solid  DarkSlateGrey;
+	background-color:LightGray;
+	color:DarkSlateGrey;
+	font-size: 15px;	
+	height:621px;
+}
+
+#logovanje p{
+	padding:12px;
+	padding-bottom:15px;
+}
+
+#logovanje button {
+	font-size: 15px;
+	border-radius: 10px 20px;
+	transition-duration: 0.4s;
+	border: 2px solid black;
+	padding: 12px 30px;
+} 
+
+button:hover {
+  background-color:DarkSlateGrey ;
+  color: white;
+}

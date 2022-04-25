@@ -1,0 +1,136 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+html {
+ height: 100%;
+ box-sizing: border-box;
+}
+
+
+body {
+	position: relative;
+	margin: 0;
+	padding-bottom: 3rem;
+	min-height:100%;
+	background-color:Linen;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#okvir {
+ margin: 0 auto;
+ box-sizing: inherit;
+ background-color:white;
+}
+
+.header {
+	padding:15px;
+	background-color:darkslategrey;
+	text-align:left;
+	color:white;
+}
+
+.nav {
+	background-color:LightGray;
+	color:white;
+	padding:30px;
+	text-align:center;
+}
+
+.nav ul {
+float: left;
+padding:0;
+margin:0;
+list-style: none;
+position: relative;
+}
+.nav ul li {
+margin: 0px;
+float: left;
+color: darkslategrey;
+}
+
+.nav a {
+display:block;
+padding: 0 14px;
+color:darkslategrey;
+font-size:20px;
+text-decoration:none;
+
+}
+.nav a:hover {
+  color: white;
+}
+
+
+
+
+
+.flex-container {
+	display: flex;
+	justify-content:space-evenly;
+	flex-direction:row;
+	background-color:Linen;
+	
+}
+
+
+
+@media only screen and (max-width: 800px){
+	.flex-container{
+			flex-direction: column;
+			padding-top:30px;
+		}
+	.skrol{
+		height:300px;
+	}
+	}
+	
+	
+	
+.flex-container >div {
+	border-radius: 50px 10px;
+	background-color:LightGray;
+	text-align:justify;
+	color:darkslategrey;
+	padding:20px;
+	margin:10px;
+	font-size:20px;
+	
+}
+
+h1{
+	font-size: 25px;
+}
+
+
+
+#c{
+	display: flex;
+  flex-direction:column;
+}
+
+#skrol{
+  overflow-y:auto;  
+   height:0px;/* visina je 0 pa se sigurno postavlja scrollbar */
+   flex:auto;  /* sam div se razvlači koliko može, a višak sadržaja može da
+se vidi skrolovanjem */
+  padding: 15px ;
+}
+#d {
+	align-self:flex-start;
+	max-width:500px;
+	min-width:500px;
+}
+
+.futer {
+ position:absolute;
+ box-sizing: inherit;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ padding: 1rem;
+ text-align: center;
+ background-color:DarkSlateGrey;
+}
