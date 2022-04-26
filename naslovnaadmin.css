@@ -31,7 +31,7 @@ body {
 ul {
 	background-color:LightGray;
 	color:white;
-	padding:12px;
+	padding:13px;
 	list-style-type:none;
 	overflow:hidden;
 }
@@ -65,10 +65,14 @@ li > a:hover, .dropdown:hover .drop{
 
 .dropdown-content {
 	width:100px;
-	position:absolute;
-	display:none;
+	position:absolute;  
+	display:none;   /*<-> */
 	background-color:darkslategrey;
 	z-index:1;
+}
+
+.drop{
+	margin-bottom: 15px;
 }
 
 .dropdown-content a {
@@ -76,11 +80,11 @@ li > a:hover, .dropdown:hover .drop{
 	text-decoration:none;
 	text-align:left;
 	color:white;
-	padding:8px;
+	padding: 8px;
 }
 
 .dropdown:hover .dropdown-content {
-	display:block;
+	display:block;     /*<-> */
 }
 
 .dropdown-content a:hover {
@@ -96,6 +100,11 @@ li > a:hover, .dropdown:hover .drop{
  padding: 1rem;
  text-align: center;
  background-color:DarkSlateGrey;
+ color: LightGray;
+}
+
+h5 {
+	font-size: 13px;
 }
 
 
