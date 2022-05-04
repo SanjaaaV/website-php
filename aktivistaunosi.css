@@ -137,6 +137,12 @@ body {
 .page .column{
 	height: 100vh;  
 }
+.page h2{
+	color:	#fff;
+	font-size: 48pt;
+	margin-top: 0px;
+	padding-top: 60px;  /*prvo smo sa inspect izracunali koliko treba a onda pisemo ovo*/
+}
 #okvir {
  margin: 0 auto;
 }
@@ -146,53 +152,108 @@ body {
 
 
 
-/*PRVA STRANA*/
-	#aktivista{
+
+/*STRANA*/
+	#logovanje {
+		border:1px solid #ffffff;
+		background: #333333570;  /*poslednja dva broja odredjuju koliko nam se element providi*/
+		font-size: 24pt;
+		padding: 40px;
+		margin-top: 30px;
+		text-align: left;
+		
+	}
+	#logovanje label{
+		padding:12px;
+		padding-bottom:15px;
+	}
+	#logovanje input{
+		padding: 10px;
+		border: 1px solid #555;
+		border-radius: 5px 5px;
+	}
+
+	#logovanje button {
+		font-size: 15px;
+		color: #557;
+		font-weight: bold;
+		border-radius: 8px 8px;
+		transition-duration: 0.3s;
+		border: 1px solid black;
+		padding: 12px 20px;
+	} 
+
+	#logovanje button:hover {
+	  background-color:DarkSlateGrey ;
+	  color: #fff;
+	}
+	#logovanje select{
+		padding: 10px;
+		border: 1px solid #555;
+		border-radius: 5px 5px;
+	}
+
+/*ZAHTEV*/
+	#broj-flajera{
+		margin-bottom: 5px;
+		width: 70px;
+	}
+
+	#unos-zahteva{
 		text-align:center;
 		color:#ffffff;
-		background:url('img/pozadina5.png');
-		 background-size: cover;
+		background: URL('img/pozadina1.png');
+		background-size: cover; 
 		background-attachment:fixed;
 	}
-	#aktivista h1{
-		font-size: 48pt;
-		margin-top: 0px;
-		padding-top: 40px;  /*prvo smo sa inspect izracunali koliko treba a onda pisemo ovo*/
+
+	#unos-zahteva #logovanje{
+		background-color: #00000050;
+		border:1px solid #fff;
+	}
+	#adresa{
+		padding:10px;
+	}
+	.brzgrade{
+		width:150px;
 	}
 
-	#mogucnosti{
-		
-		border:1px solid #ffffff;
-		background: #33333350;  /*poslednja dva broja odredjuju koliko nam se element providi*/
-		font-size: 20pt;
-		padding: 40px;
-		padding-bottom:50px;
-		margin-top: 30px;
-		
-		
-	}
-	#mogucnosti div{
-		padding: 10px;
-		background-color: #ffffff50;
-	}
-	#flexbox{
-		display:flex;
-	}
-	#flexbox p{
-		color: #555;
-	}
-	#flexbox div{
-		flex-grow:1;
+/*ADRESA*/
+	#unos-adreseaktivista{
+		text-align:center;
+		color:#ffffff;
+		background: #555;
+		background-size: cover; 
+		background-attachment:fixed;
 	}
 
-	#mogucnosti a{
-		display: block;
-		padding: 2px;
-		color: #fff;
-		text-decoration: none;
+
+
+
+	#unos-adreseaktivista #logovanje{
+		background-color: #00000050;
+		border:1px solid #585;
 	}
-	#mogucnosti a:hover{
-		color: #800000;
+
+	#unos-adreseaktivista p,
+	ul li
+	{
+		text-align:left;
+		list-style:number;
+	}
+
+	/*PREOSTALI FLAJERI*/
+	#unos-brpreostalihflajera{
+		text-align:center;
+		color:#ffffff;
+		background: URL('img/pozadina1.png');
+		background-size: cover; 
+		background-attachment:fixed;
+	}
+	
+	#unos-brpreostalihflajera #logovanje{
+		background-color: #00000050;
+		border:1px solid #fff;
 	}
 
 
@@ -253,7 +314,6 @@ body {
 
 
 
-
 @media only screen and (max-width: 800px){
 	.column{
 		width: 100vw;
@@ -265,6 +325,4 @@ body {
 	}
 	
 	
-	
 	}
-

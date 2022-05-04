@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="naslovnastil.css">
-	<title>Deljenje flajera</title>
+	<link rel="stylesheet" type="text/css" href="spisakaktivista.css">
+	<title>Administrator-spisak aktivista</title>
 	<meta charset="utf-8">
 </head>
 
@@ -29,7 +29,7 @@
 			
 				<nav id="navigacija">
 					<div>
-						<a href="#logo-i-social" class="active">Pocetna</a>
+						<a href="./Naslovna (1).html" >Pocetna</a>
 					</div>
 					<div>
 						<a href="./ulogujse.html">Uloguj se</a>
@@ -49,16 +49,17 @@
 									<a href="./aktivistaunosi.html #unos-brpreostalihflajera">Broj flajera</a>
 								</div>
 							</div>
+							
 						</div>
 					</div>
 					<div>
-						<a href="./navadmin.html">Administrator</a>
+						<a href="./navadmin.html" class="active">Administrator</a>
 						<div>
 							<div class="drop-content">
 							<a href="./flajeriadmin.html">Flajeri</a>
 							</div>
 							<div class="drop-content">
-							<a href="./spisakaktivista.html">Aktivisti</a>
+							<a href="#navigacija">Aktivisti</a>
 							</div>
 							<div class="drop-content">
 								<a class="drop" href="./adminunosi.html">Unesi</a>
@@ -87,6 +88,7 @@
 									<a href="./odobriadmin.html #zahtev">Zahtev</a>
 								</div>
 							</div>
+							
 						</div>
 					</div>
 					<div>
@@ -96,39 +98,30 @@
 				
 			</div>
 	</div>
-		
-		<div class="page" id="pocetna">
+	
+	
+	
+	<div class="page" id="aktivista">
 			<div class="column">
-					<h1>Pocetna</h1>
-					<div class="flex-container">
-						<div id="c">
-							<div><h2>Javni flajeri</h2></div>
-							<div id="skrol">
-								<ul id="lista-flajera">
-									<li>flajer1 popusti</li>
-									<li>flajer2 popusti</li>
-									<li>flajer3 popusti</li>
-									<li>flajer4 popusti</li>
-									<li>flajer5 popusti</li>	
-								</ul>
-							</div>
-						</div>
-
-						<div id="d"><h2>Uputstvo za aktiviste</h2>Ovakav vid posla je odličan za studente ili kao dodatni posao.
-						radno vreme je fleksibilno i možete ga uskladiti za svojim obavezama. 
-						Ulogujte se i unesite adrese koje bi vam najviše odgovarale, a mi ćemo Vas za iste angažovati, kako bismo bili što efikasniji. 
-						Potrebno je da se registrujete na sajtu ukoliko vec namate nalog.
-						Moci cete da izaberete adrese koje vam najvese odvaraju za deljenje flajera.
-						Srecno!
-						</div>
+					<h1>Aktivisti</h1>
+					<div id="logovanje">
+						<form action=“azuriraj-aktivistu.php" method="post">
+							<p><b>Spisak aktivista</b></p><br>
+							<ul id="lista-aktivista">
+								<li>aktivista</li>
+								<li>aktivista</li>
+								<li>aktivista</li>
+								<li>aktivista</li>
+								<li>aktivista</li>	
+							</ul>
+						</form>
 					</div>
 			
 			</div>
-		</div>
-		
-		
-		
-		<div class="footer">
+	</div> 
+	
+	
+	<div class="footer">
 			<div class="column">
 				<div class="footer-column" "align-left">
 						<strong>E-mail</strong><br>
@@ -139,11 +132,11 @@
 						
 				</div>
 				<div class="footer-column" "align-center">
-					&copy; 2022 Sanja i Ilija<br>
+					&copy; 2022<br>
 				</div>
 				<div class="footer-column" "align-right">
-					<a class="red-link" href="./ulogujse.html">Uloguj se </a><br>
-					<a class="red-link" href="./registrujse.html">Registruj se</a><br>
+					<a class="red-link" href="./Naslovna (1).html">Pocetna </a><br>
+					<a class="red-link" href="./izlogujse.html">Izloguj se</a><br>
 				</div>
 			</div>
 		</div>

@@ -137,6 +137,13 @@ body {
 .page .column{
 	height: 100vh;  
 }
+
+.page h2{
+	color:	#fff;
+	font-size: 48pt;
+	margin-top: 0px;
+	padding-top: 60px;  /*prvo smo sa inspect izracunali koliko treba a onda pisemo ovo*/
+}
 #okvir {
  margin: 0 auto;
 }
@@ -145,56 +152,90 @@ body {
 
 
 
-
-/*PRVA STRANA*/
-	#aktivista{
-		text-align:center;
-		color:#ffffff;
-		background:url('img/pozadina5.png');
-		 background-size: cover;
-		background-attachment:fixed;
-	}
-	#aktivista h1{
-		font-size: 48pt;
-		margin-top: 0px;
-		padding-top: 40px;  /*prvo smo sa inspect izracunali koliko treba a onda pisemo ovo*/
-	}
-
-	#mogucnosti{
-		
+/*STRANA*/
+	#logovanje {
 		border:1px solid #ffffff;
-		background: #33333350;  /*poslednja dva broja odredjuju koliko nam se element providi*/
-		font-size: 20pt;
+		background: #333333570;  /*poslednja dva broja odredjuju koliko nam se element providi*/
+		font-size: 24pt;
 		padding: 40px;
-		padding-bottom:50px;
 		margin-top: 30px;
-		
+		text-align: left;
 		
 	}
-	#mogucnosti div{
+	#logovanje label{
+		padding:12px;
+		padding-bottom:15px;
+	}
+	#logovanje input{
 		padding: 10px;
-		background-color: #ffffff50;
-	}
-	#flexbox{
-		display:flex;
-	}
-	#flexbox p{
-		color: #555;
-	}
-	#flexbox div{
-		flex-grow:1;
+		border: 1px solid #555;
+		border-radius: 5px 5px;
 	}
 
-	#mogucnosti a{
-		display: block;
-		padding: 2px;
-		color: #fff;
-		text-decoration: none;
-	}
-	#mogucnosti a:hover{
-		color: #800000;
+	#logovanje button {
+		font-size: 15px;
+		color: #557;
+		font-weight: bold;
+		border-radius: 8px 8px;
+		transition-duration: 0.3s;
+		border: 1px solid black;
+		padding: 12px 20px;
+		margin-left:20px;
+	} 
+
+	#logovanje button:hover {
+	  background-color:DarkSlateGrey ;
+	  color: #fff;
 	}
 
+/*FLAJER*/
+		#flajer{
+			text-align:center;
+			color:#ffffff;
+			background: #555;
+			background-size: cover; 
+			background-attachment:fixed;
+		}
+
+
+		#flajer #logovanje{
+			background-color: #00000050;
+			border:1px solid #585;
+		}
+
+
+/*AKTIVISTA*/
+		#aktivista{
+			text-align:center;
+			color:#ffffff;
+			background: URL('img/pozadina1.png');
+			background-size: cover; 
+			background-attachment:fixed;
+		}
+
+		#aktivista #logovanje{
+			background-color: #00000050;
+		}
+
+
+/*ULICA*/
+		#ulica{
+			text-align:center;
+			color:#ffffff;
+			background: URL('img/pozadina1.png');
+			background-size: cover; 
+			background-attachment:fixed;
+		}
+
+
+		#ulica #logovanje{
+			background-color: #00000050;
+		}
+
+	ul li{
+		list-style: number;
+		text-align:left;
+	}
 
 
 
@@ -265,6 +306,4 @@ body {
 	}
 	
 	
-	
 	}
-

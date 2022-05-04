@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="adminunosi.css">
+	<title>Administrator-unosi</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+<div id="okvir">
+	<div class="header">
+			<div class="column">
+				<div id="logo-i-social">
+					<div id="logo-holder">
+						<img alt="Podeli flajer" src="img/logo.png">    
+					</div>
+					<div id="social-holder">
+						<a href="#">
+							<img alt="facebook" src="img/facebook.svg">
+						</a>
+						<a href="#">
+							<img alt="twitter" src="img/twitter.svg">
+						</a>
+						<a href="#">
+							<img alt="Instagram" src="img/instagram.svg">
+						</a>
+					</div>
+				</div>
+			
+				<nav id="navigacija">
+					<div>
+						<a href="./Naslovna (1).html" >Pocetna</a>
+					</div>
+					<div>
+						<a href="./ulogujse.html">Uloguj se</a>
+					</div>
+					<div>
+						<a href="./navaktivista.html">Aktivista</a>
+						<div>
+							<div class="drop-content">
+							<a href="./flajeriaktivista.html">Flajeri</a>
+							</div>
+							
+							<div class="drop-content">
+								<a class="drop" href="./aktivistaunosi.html">Unesi</a>
+								<div>
+									<a href="./aktivistaunosi.html #unos-zahteva">Zahtev</a>
+									<a href="./aktivistaunosi.html #unos-adreseaktivista">Adrese</a>
+									<a href="./aktivistaunosi.html #unos-brpreostalihflajera">Broj flajera</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div>
+						<a href="./navadmin.html" class="active">Administrator</a>
+						<div>
+							<div class="drop-content">
+							<a href="./flajeriadmin.html">Flajeri</a>
+							</div>
+							<div class="drop-content">
+							<a href="./spisakaktivista.html">Aktivisti</a>
+							</div>
+							<div class="drop-content">
+								<a class="drop" href="#">Unesi</a>
+								<div>
+									<a href="#unos-aktiviste">Aktivistu</a>
+									<a href="#unos-flajera">Flajer</a>
+									<a href="#unos-ulice">Ulicu</a>
+									<a href="#unos-adrese">Adresu</a>
+								</div>
+							</div>
+							<div class="drop-content">
+								<a class="drop" href="./azurirajadmin.html">Azuriraj</a>
+								<div>
+									<a href="./azurirajadmin.html #aktivista">Aktivistu</a>
+									<a href="./azurirajadmin.html #flajer">Flajer</a>
+									<a href="./azurirajadmin.html #ulica">Adresu</a>
+								</div>
+							</div>
+							<div class="drop-content">
+							<a href="./alociraj.html">Alociraj</a>
+							</div>
+							<div class="drop-content">
+								<a class="drop" href="./odobriadmin.html">Odobri</a>
+								<div>
+									<a href="./odobriadmin.html #aktivista">Aktivistu</a>
+									<a href="./odobriadmin.html #zahtev">Zahtev</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div>
+						<a href="./izlogujse.html">Izloguj se</a>
+					</div>
+				</nav>
+				
+			</div>
+	</div>
+		
+		<div class="page" id="unos-aktiviste">
+			<div class="column">
+					<h2>Registruj aktivistu</h2>
+					<div id="logovanje">
+						<form action=“registrujse.php" method="post">
+						<label for="input-email">E-mail:</label>
+						<input type="email" name="email" id="input-email"  required><br>
+						<label for="password">Password:
+						<input type=“password” name="sifra" size=“20” required><br>
+						<label for="input-ime">Ime:</label>
+						<input id="input-ime" type="text" name="Ime" required><br>
+						<label for="input-prezime">Prezime:</label>
+						<input id="input-prezime" type="text" name="Prezime" required><br>
+						<label for="i-phone">Telefon:</label>
+						<input type="phone" name="telefon" id="i-phone" required><br>
+						<label for="input-adresa">Adresa:</label><br>
+						<textarea rows="4" name="adresa" id="input-adresa" required></textarea><br>
+						<br>
+						<button type="button">Registruj se</button>
+						</form>
+					</div>
+			
+			</div>
+		</div>
+		
+		<div class="page" id="unos-flajera">
+			<div class="column">
+					<h2>Unesi flajer</h2>
+					<div id="logovanje">
+						<form action=“dodaj-flajer.php" method="post">
+						<label for="input-ime">Ime flajera:</label>
+						<input id="input-ime" type="text" name="Imeflajera" required><br>
+						
+						<label for="html-kod">Html:</label>
+						<textarea rows="6" name="htmlkod" id="html-kod" required></textarea><br>
+						
+						<label for="myfile">Dodaj pdf:</label>
+						<input type="file" id="myfile" name="myfile"><br>
+						
+						<label for="broj-flajera">Broj flajera:</label>
+						<input id="broj-flajera" type="number" min="0" step="1" name="broj-flajera" required><br>
+						
+						<label>Flajer je:</label>
+						<input type="radio" name="kategorija1" value="javni" checked>Javni<br>
+						<input type="radio" name="kategorija2" value="tajni" id="tajni">Tajni<br>
+						
+			
+						<br>
+						<button type="button">Dodaj flajer</button>
+						</form>
+					</div>
+			
+			</div>
+		</div>
+		
+		<div class="page" id="unos-ulice">
+			<div class="column">
+					<h2>Unesi ulicu</h2>
+					<div id="logovanje">
+						<form action=“unesi-ulicu.php" method="post">
+						
+						<label for="ulica">Ulica:</label><br>
+						<textarea rows="7" name="ulica" id="ulica" required></textarea><br>
+						<br>
+						<button type="button">Dodaj ulicu</button>
+						</form>
+					</div>
+			
+			</div>
+		</div>
+		
+			
+		
+		<div class="page" id="unos-adrese">
+			<div class="column">
+					<h2>Unesi adresu</h2>
+					<div id="logovanje">
+						<form action=“registrujse.php" method="post">
+							<label for="adresa">Adresa:</label>
+							<select name="ulica" id="adresa">
+								<option value="0001">prva ulica</option>
+								<option value="0002">druga ulica</option>
+								<option value="0003">treca ulica</option>
+								<option value="0004">cetvrta ulica</option>
+								<option value="0005">peta ulica</option>
+								<option value="0006">sesta ulica</option>
+							</select><br>
+							<label>Brojevi zgrada(odvojeni zarezom):</label>
+							<input type="text" name="brojz1" class="brzgrade">
+							<br><br>
+							
+						<button type="button">Dodaj adresu</button>
+						</form>
+					</div>
+			
+			</div>
+		</div>
+		
+		
+		
+		<div class="footer">
+			<div class="column">
+				<div class="footer-column" "align-left">
+						<strong>E-mail</strong><br>
+						<a class="red-link" href="mailto:podeli.flajer@gmail.com">podeli.flajer@gmail.com</a><br>
+						<br>
+						<strong>Telefon</strong><br>
+						<p>+381115623965</p>
+						
+				</div>
+				<div class="footer-column" "align-center">
+					&copy; 2022<br>
+				</div>
+				<div class="footer-column" "align-right">
+					<a class="red-link" href="./Naslovna (1).html">Pocetna </a><br>
+					<a class="red-link" href="./izlogujse.html">Izloguj se</a><br>
+				</div>
+			</div>
+		</div>
+
+
+
+</div>
+</body>
+
+</html>

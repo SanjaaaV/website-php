@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="aktivistaunosi.css">
+	<title>Aktivista-unosi</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+<div id="okvir">
+	<div class="header">
+			<div class="column">
+				<div id="logo-i-social">
+					<div id="logo-holder">
+						<img alt="Podeli flajer" src="img/logo.png">    
+					</div>
+					<div id="social-holder">
+						<a href="#">
+							<img alt="facebook" src="img/facebook.svg">
+						</a>
+						<a href="#">
+							<img alt="twitter" src="img/twitter.svg">
+						</a>
+						<a href="#">
+							<img alt="Instagram" src="img/instagram.svg">
+						</a>
+					</div>
+				</div>
+			
+				<nav id="navigacija">
+					<div>
+						<a href="./Naslovna (1).html" >Pocetna</a>
+					</div>
+					<div>
+						<a href="./ulogujse.html">Uloguj se</a>
+					</div>
+					<div>
+						<a href="./navaktivista.html" class="active">Aktivista</a>
+						<div>
+							<div class="drop-content">
+							<a href="./flajeriaktivista.html">Flajeri</a>
+							</div>
+							
+							<div class="drop-content">
+								<a class="drop" href="#unos-zahteva">Unesi</a>
+								<div>
+									<a href=" #unos-zahteva">Zahtev</a>
+									<a href=" #unos-adreseaktivista">Adrese</a>
+									<a href=" #unos-brpreostalihflajera">Broj flajera</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					<div>
+						<a href="./izlogujse.html">Izloguj se</a>
+					</div>
+				</nav>
+				
+			</div>
+	</div>
+	
+	
+	<div class="page" id="unos-zahteva">
+			<div class="column">
+					<h2>Unesi zahtev</h2>
+					<div id="logovanje">
+						<form action=“unesi-zahtev.php" method="post">
+							<label for="adresa">Flajer:</label>
+							<select name="flajer" id="adresa">
+								<option value="0001">prvi flajer</option>
+								<option value="0002">drugi flajer</option>
+								<option value="0003">treci flajer</option>
+								<option value="0004">cetvrti flajer</option>
+								<option value="0005">peti flajer</option>
+								<option value="0006">sesti flajer</option>
+							</select>
+							<label for="broj-flajera">Broj flajera:</label>
+							<input id="broj-flajera" type="number" min="0" step="1" name="broj-flajera" required><br><br>
+						
+							<label for="adresa">Ulica:</label>
+							<select name="ulica" id="adresa">
+								<option value="0001">prva ulica</option>
+								<option value="0002">druga ulica</option>
+								<option value="0003">treca ulica</option>
+								<option value="0004">cetvrta ulica</option>
+								<option value="0005">peta ulica</option>
+								<option value="0006">sesta ulica</option>
+							</select>
+							<label>Brojevi zgrada(odvojeni zarezom):</label>
+							<input type="text" name="brojz1" class="brzgrade">
+							<br><br>
+							
+							<button type="button">Zahtev</button>
+						</form>
+					</div>
+			
+			</div>
+		</div>
+		
+		<div class="page" id="unos-adreseaktivista">
+			<div class="column">
+					<h2>Unesi adresu</h2>
+					<div id="logovanje">
+						<form action=“unesi-adreseaktivista.php" method="post">
+							<p>Oznacite da li je adresa izflajerisana:</p><br>
+							<ul id="lista-alocadresa">
+								<li>Adresa 1    <input type="checkbox" name="alocirana1" id="i-alocirana1" value="1"><br></li>
+								<li>Adresa 2    <input type="checkbox" name="alocirana2" id="i-alocirana2" value="1"><br></li>
+								<li>Adresa 3    <input type="checkbox" name="alocirana3" id="i-alocirana3" value="1"><br></li>
+								<li>Adresa 4    <input type="checkbox" name="alocirana4" id="i-alocirana4" value="1"><br></li>
+								<li>Adresa 5    <input type="checkbox" name="alocirana5" id="i-alocirana5" value="1"><br></li>	
+							</ul><br>
+		
+							<button type="button">Prosledi</button>
+						</form>
+					</div>
+			
+			</div>
+		</div>
+		
+		<div class="page" id="unos-brpreostalihflajera">
+			<div class="column">
+					<h1>Broj flajera</h1>
+					<div id="logovanje">
+						<form action=“unesi-brpreostalihflajera.php" method="post">
+						<label>Broj preostalih flajera je:</label>
+						<input type="number" name="brojflajera" class="brflajera"
+								min="0" step="1"><br><br>
+						<button type="button">Prosledi</button>
+						</form><br>
+				
+					</div>
+			
+			</div>
+		</div>
+		
+		
+		
+		
+		<div class="footer">
+			<div class="column">
+				<div class="footer-column" "align-left">
+						<strong>E-mail</strong><br>
+						<a class="red-link" href="mailto:podeli.flajer@gmail.com">podeli.flajer@gmail.com</a><br>
+						<br>
+						<strong>Telefon</strong><br>
+						<p>+381115623965</p>
+						
+				</div>
+				<div class="footer-column" "align-center">
+					&copy; 2022<br>
+				</div>
+				<div class="footer-column" "align-right">
+					<a class="red-link" href="./Naslovna (1).html">Pocetna </a><br>
+					<a class="red-link" href="./izlogujse.html">Izloguj se</a><br>
+				</div>
+			</div>
+		</div>
+
+
+
+</div>
+</body>
+
+</html>

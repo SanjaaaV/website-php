@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="naslovnastil.css">
-	<title>Deljenje flajera</title>
+	<link rel="stylesheet" type="text/css" href="registrujse.css">
+	<title>Registruj se</title>
 	<meta charset="utf-8">
 </head>
 
@@ -29,10 +29,10 @@
 			
 				<nav id="navigacija">
 					<div>
-						<a href="#logo-i-social" class="active">Pocetna</a>
+						<a href="./Naslovna (1).html" >Pocetna</a>
 					</div>
 					<div>
-						<a href="./ulogujse.html">Uloguj se</a>
+						<a href="./registrujse.html" class="active">Registruj se</a>
 					</div>
 					<div>
 						<a href="./navaktivista.html">Aktivista</a>
@@ -49,6 +49,7 @@
 									<a href="./aktivistaunosi.html #unos-brpreostalihflajera">Broj flajera</a>
 								</div>
 							</div>
+							
 						</div>
 					</div>
 					<div>
@@ -61,7 +62,7 @@
 							<a href="./spisakaktivista.html">Aktivisti</a>
 							</div>
 							<div class="drop-content">
-								<a class="drop" href="./adminunosi.html">Unesi</a>
+								<a class="drop" href="#">Unesi</a>
 								<div>
 									<a href="./adminunosi.html #unos-aktiviste">Aktivistu</a>
 									<a href="./adminunosi.html #unos-flajera">Flajer</a>
@@ -87,6 +88,7 @@
 									<a href="./odobriadmin.html #zahtev">Zahtev</a>
 								</div>
 							</div>
+						
 						</div>
 					</div>
 					<div>
@@ -96,39 +98,36 @@
 				
 			</div>
 	</div>
-		
-		<div class="page" id="pocetna">
-			<div class="column">
-					<h1>Pocetna</h1>
-					<div class="flex-container">
-						<div id="c">
-							<div><h2>Javni flajeri</h2></div>
-							<div id="skrol">
-								<ul id="lista-flajera">
-									<li>flajer1 popusti</li>
-									<li>flajer2 popusti</li>
-									<li>flajer3 popusti</li>
-									<li>flajer4 popusti</li>
-									<li>flajer5 popusti</li>	
-								</ul>
-							</div>
-						</div>
-
-						<div id="d"><h2>Uputstvo za aktiviste</h2>Ovakav vid posla je odličan za studente ili kao dodatni posao.
-						radno vreme je fleksibilno i možete ga uskladiti za svojim obavezama. 
-						Ulogujte se i unesite adrese koje bi vam najviše odgovarale, a mi ćemo Vas za iste angažovati, kako bismo bili što efikasniji. 
-						Potrebno je da se registrujete na sajtu ukoliko vec namate nalog.
-						Moci cete da izaberete adrese koje vam najvese odvaraju za deljenje flajera.
-						Srecno!
-						</div>
-					</div>
-			
+	
+	<div class="page" id="formular1">
+		<div class="column">
+			<h1>Registruj se</h1>
+			<div id="logovanje">
+				<form action=“registrujse.php" method="post">
+				<label for="input-email">E-mail:</label>
+				<input type="email" name="email" id="input-email"  required><br>
+				<label for="password">Password:
+				<input type=“password” name="sifra" size=“20” required><br>
+				<label for="input-ime">Ime:</label>
+			    <input id="input-ime" type="text" name="Ime" required><br>
+				<label for="input-prezime">Prezime:</label>
+			    <input id="input-prezime" type="text" name="Prezime" required><br>
+				<label for="i-phone">Telefon:</label>
+			    <input type="phone" name="telefon" id="i-phone" required><br><br>
+				<label for="input-adresa">Adresa: </label>
+			    <textarea rows="4" name="adresa" id="input-adresa" required></textarea><br>
+				<br>
+				<button type="button">Registruj se</button>
+				</form><br><br>
+				
+				<p>Imate nalog? <a class="red-link" href="./ulogujse.html">Uloguj se</a></p>
+				
 			</div>
 		</div>
-		
-		
-		
-		<div class="footer">
+	</div>
+	
+	
+	<div class="footer">
 			<div class="column">
 				<div class="footer-column" "align-left">
 						<strong>E-mail</strong><br>
@@ -139,17 +138,15 @@
 						
 				</div>
 				<div class="footer-column" "align-center">
-					&copy; 2022 Sanja i Ilija<br>
+					&copy; 2022<br>
 				</div>
 				<div class="footer-column" "align-right">
+					<a class="red-link" href="./Naslovna (1).html">Pocetna</a><br>
 					<a class="red-link" href="./ulogujse.html">Uloguj se </a><br>
-					<a class="red-link" href="./registrujse.html">Registruj se</a><br>
+					
 				</div>
 			</div>
 		</div>
-
-
-
 </div>
 </body>
 

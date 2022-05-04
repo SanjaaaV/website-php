@@ -6,6 +6,7 @@
 html {
  height: 100%;
  box-sizing: border-box;
+ scroll-behavior: smooth;
 }
 
 
@@ -14,92 +15,255 @@ body {
 	margin: 0;
 	padding-bottom: 3rem;
 	min-height:100%;
-	background-color:Linen;
 	font-family: 'Open Sans', sans-serif;
 }
 
-#okvir {
- margin: 0 auto;
- box-sizing: inherit;
- background-color:white;
-}
+
 
 .header {
-	padding:15px;
-	background-color:darkslategrey;
+	padding-top:10px;
+	background-color:white;
 	text-align:left;
-	color:white;
-}
-
-ul {
-	background-color:LightGray;
-	color:white;
-	padding:12px;
-	list-style-type:none;
-	overflow:hidden;
-}
-
-ul > li {
-	float:left;
-	display:block;
-}
-
-li > a{
-	display:block;
-	padding:0 14px;
-	color:darkslategrey;
-    font-size:20px;
-	text-align:center;
-	text-decoration:none;
-}
-
-li > a:hover, .dropdown:hover .drop{
-	color:white;
-}
-
-.desno {
-	float:right;
-}
-
-@media screen and (max-width: 800px) {
-	ul.navigacija li, ul.navigacija li.desno {float:none;}
-	li > a {text-align:left;}
-}
-
-.dropdown-content {
-	width:100px;
-	position:absolute;
-	display:none;
-	background-color:darkslategrey;
-	z-index:1;
-}
-
-.dropdown-content a {
-	display:block;
-	text-decoration:none;
-	text-align:left;
-	color:white;
-	padding:8px;
-}
-
-.dropdown:hover .dropdown-content {
-	display:block;
-}
-
-.dropdown-content a:hover {
-	background-color:lightslategrey;
+	border-bottom: 2px solid	#800000;
 }
 
 
+/*LOGO I SOCIAL*/
+	#logo-i-social{
+		display: flex;
+	}
+
+	#logo-holder{
+		flex-grow: 1;
+	}
+
+	#social-holder{
+		flex-grow: 1;
+		text-align: right;
+	}
+
+	#social-holder a {
+		text-decoration: none;
+	}
+
+	#logo-holder img{
+		height: 100px;
+		width: 180px;	
+	}
 
 
-.flex-container {
-	display: flex;
-	justify-content:space-evenly;
-	flex-direction:row;
-	background-color:Linen;
-	
+/*NAVIGACIJA*/
+	#navigacija{
+		display: flex;
+	}
+	#navigacija >div{
+		position:relative;
+	}
+	#navigacija a{
+		text-align: center;
+		display: block;    /*zbog ovoga se moze pedding definisati */
+		padding: 10px 30px;
+		text-decoration: none;
+		color:darkslategrey;
+		transition: 300ms;    /* vreme za hover promenu */
+		font-weight: bold;
+	}
+
+	#navigacija a:hover,
+	#navigacija a.active{   /*kada se nalazimo na nekoj stranici */
+		background: lightslategrey;
+		color: white;
+	}
+	#navigacija >div >div>a{
+		display: block;
+		padding: 10px 30px;
+		text-decoration: none;
+		color:darkslategrey;
+		transition: 300ms;
+		
+	}
+	#navigacija >div >div>a:hover{
+		background: lightslategrey;
+		color: white;
+		transition: 150ms;
+		
+	}
+	#navigacija >div >div{
+		display:none;
+		position:absolute;
+		min-width: 150px;
+		background-color: #fff;
+	}
+	#navigacija >div:hover>div{
+		display:block;
+		z-index:1;
+	}
+	.drop-content{
+		position:relative;
+	}
+	.drop-content >div >a{
+		display: block;
+		padding: 10px 30px;
+		text-decoration: none;
+		color:darkslategrey;
+		transition: 300ms;
+	}
+	.drop-content >div >a:hover{
+		background: lightslategrey;
+		color: white;
+		transition: 150ms;
+	}
+	.drop-content >div {
+		display:none;
+		position:absolute;
+		bottom:0px;
+		left:150px;
+		min-width: 150px;
+		background-color: #fff;
+	}
+	.drop-content:hover div{
+		display:block;
+		z-index:1;
+	}
+
+
+
+
+
+.column{
+	width: 1000px;
+	margin: 0px auto;  /* centrirano u odnosu na okruzujuci div */
 }
+.page .column{
+	height: 100vh;  
+}
+
+
+/*PRVA STRANA*/
+	#pocetna{
+		text-align:center;
+		color:#ffffff;
+		background:url('img/pozadina1.png');
+		background-size: cover; 
+		background-attachment:fixed;
+	}
+
+
+	.flex-container {
+		flex-grow: 1;
+		display: flex;
+		justify-content:space-evenly;
+		flex-direction:row;
+		border:1px solid #fff;
+		background: #33333350;  /*poslednja dva broja odredjuju koliko nam se element providi*/
+		font-size: 24pt;
+		padding: 40px;
+		display:flex;
+	}
+
+		
+	.flex-container >div {
+		border:1px solid #ffffff;
+		text-align:justify;
+		color:#fff;
+		padding:20px;
+		margin:5px;
+		font-size:20px;
+		
+	}
+
+	#pocetna h1{
+		font-size: 48pt;
+		margin-top: 0px;
+		padding-top: 40px;  /*prvo smo sa inspect izracunali koliko treba a onda pisemo ovo*/
+	}
+
+	#c h2,
+	#d h2{
+		font-size:30px;
+	}
+
+
+
+	#c{
+		display: flex;
+		flex-direction:column;
+	}
+
+	#skrol{
+	  overflow-y:auto;  
+	   height:0px;/* visina je 0 pa se sigurno postavlja scrollbar */
+	   flex:auto;  /* sam div se razvlači koliko može, a višak sadržaja može da
+	se vidi skrolovanjem */
+	  padding: 30px ;
+	}
+	ul li{
+		list-style:number;
+	}
+	#d {
+		align-self:flex-start;
+		max-width:500px;
+	}
+
+
+
+
+/*FUTER*/
+	.footer{
+		border-top: 3px solid #dc0101;
+		background: #fefefe;
+		font-size: 13px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		
+	}
+
+	.footer > .column{
+		display:flex;
+		margin: 0px auto;
+	}
+
+	.footer .footer-column{
+		flex-grow: 1;
+		flex-basis: 0;
+		padding-top: 20px;
+		padding-bottom:20px;
+	}
+
+
+	.align-center{
+		text-align: center;
+		
+	}
+
+	.align-left{
+		text-align:left;
+	}
+
+	.align-right{
+		text-align: right;
+	}
+
+	.red-link{
+		text-decoration: none;
+		color: #dc0101;
+	}
+
+	.red-link:hover{
+		text-decoration: underline;
+		
+	}
+	h5 {
+		font-size: 13px;
+	}
+
+	#okvir {
+	 margin: 0 auto;
+	}
+
+
 
 
 
@@ -107,65 +271,24 @@ li > a:hover, .dropdown:hover .drop{
 	.flex-container{
 			flex-direction: column;
 			padding-top:30px;
+			padding-bottom:20px;
+		
 		}
-	.skrol{
-		height:300px;
+	#skrol{
+		height: 150px;
 	}
+	.column{
+		width: 100vw;
+		padding: 0 20px;
+	}
+	.page .column{
+		height: auto;
+		padding-bottom: 150px;
 	}
 	
 	
 	
-.flex-container >div {
-	border-radius: 50px 10px;
-	background-color:LightGray;
-	text-align:justify;
-	color:darkslategrey;
-	padding:20px;
-	margin:10px;
-	font-size:20px;
-	
-}
-
-h1{
-	font-size: 25px;
-}
-
-
-
-#c{
-	display: flex;
-  flex-direction:column;
-}
-
-#skrol{
-  overflow-y:auto;  
-   height:0px;/* visina je 0 pa se sigurno postavlja scrollbar */
-   flex:auto;  /* sam div se razvlači koliko može, a višak sadržaja može da
-se vidi skrolovanjem */
-  padding: 15px ;
-}
-#d {
-	align-self:flex-start;
-	max-width:500px;
-	min-width:500px;
-}
-
-.futer {
- position:absolute;
- box-sizing: inherit;
- right: 0;
- bottom: 0;
- left: 0;
- padding: 1rem;
- text-align: center;
- background-color:DarkSlateGrey;
- color: LightGray;
-}
-
-h5 {
-	font-size: 13px;
-}
-
+	}
 
 
 

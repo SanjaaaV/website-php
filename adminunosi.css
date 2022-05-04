@@ -137,6 +137,11 @@ body {
 .page .column{
 	height: 100vh;  
 }
+.page h2{
+	font-size: 48pt;
+	margin-top: 0px;
+	padding-top: 100px;  /*prvo smo sa inspect izracunali koliko treba a onda pisemo ovo*/
+}
 #okvir {
  margin: 0 auto;
 }
@@ -146,54 +151,133 @@ body {
 
 
 
-/*PRVA STRANA*/
-	#aktivista{
-		text-align:center;
-		color:#ffffff;
-		background:url('img/pozadina5.png');
-		 background-size: cover;
-		background-attachment:fixed;
-	}
-	#aktivista h1{
-		font-size: 48pt;
-		margin-top: 0px;
-		padding-top: 40px;  /*prvo smo sa inspect izracunali koliko treba a onda pisemo ovo*/
-	}
-
-	#mogucnosti{
-		
+/*STANA*/
+	#logovanje {
 		border:1px solid #ffffff;
 		background: #33333350;  /*poslednja dva broja odredjuju koliko nam se element providi*/
-		font-size: 20pt;
+		font-size: 24pt;
 		padding: 40px;
-		padding-bottom:50px;
 		margin-top: 30px;
-		
+		text-align: left;
 		
 	}
-	#mogucnosti div{
+	#logovanje label{
+		padding:12px;
+		padding-bottom:15px;
+	}
+	#logovanje input{
 		padding: 10px;
-		background-color: #ffffff50;
-	}
-	#flexbox{
-		display:flex;
-	}
-	#flexbox p{
-		color: #555;
-	}
-	#flexbox div{
-		flex-grow:1;
+		border: 1px solid #555;
+		border-radius: 5px 5px;
 	}
 
-	#mogucnosti a{
-		display: block;
-		padding: 2px;
-		color: #fff;
-		text-decoration: none;
+	#logovanje button {
+		font-size: 15px;
+		color: #557;
+		font-weight: bold;
+		border-radius: 8px 8px;
+		transition-duration: 0.3s;
+		border: 1px solid black;
+		padding: 12px 20px;
+	} 
+
+	#logovanje button:hover {
+	  background-color:DarkSlateGrey ;
+	  color: #fff;
 	}
-	#mogucnosti a:hover{
-		color: #800000;
-	}
+/*PRVA STRANA*/
+		#unos-aktiviste{
+			text-align:center;
+			color:#ffffff;
+			background:url('img/pozadina1.png');
+			background-size: cover; 
+			background-attachment:fixed;
+		}
+
+
+		#input-adresa,#html-kod, #ulica{
+			border: 1px solid #555;
+			border-radius: 5px 5px;
+		}
+		#tajni{
+			margin-left:155px;
+		}
+
+		select{
+			border: 1px solid #555;
+			border-radius: 5px 5px;
+		}
+
+/*UNOS FLAJERA*/
+		#unos-flajera{
+			text-align:center;
+			color:#ffffff;
+			background:#555;;
+			background-size: cover; 
+			background-attachment:fixed;
+		}
+
+
+		#unos-flajera h1{
+			color: #fff;
+			font-size: 48pt;
+			margin-top: 0px;
+			padding-top: 40px;  /*prvo smo sa inspect izracunali koliko treba a onda pisemo ovo*/
+		}
+
+		#unos-flajera #logovanje{
+			background: #00000050;
+			border:1px solid #585;
+		}
+		#html-kod{
+			width:500px;
+			border: 1px solid #555;
+			margin-top: 5px;
+		}
+		#broj-flajera{
+			margin-bottom: 5px;
+		}
+
+
+/*UNOS ULICE*/
+		#unos-ulice{
+			text-align:center;
+			color:#ffffff;
+			background:url('img/pozadina6.jpg');
+			background-size: cover; 
+			background-attachment:fixed;
+		}
+
+
+		#unos-ulice h2{
+			color: #555;
+			
+		}
+
+		#ulica{
+			width:500px;
+		}
+
+/*UNOS ADRESE*/
+		#unos-adrese{
+			text-align:center;
+			color:#ffffff;
+			background: #555;
+			background-size: cover; 
+			background-attachment:fixed;
+		}
+
+
+		#unos-adrese #logovanje{
+			background-color: #00000050;
+			border:1px solid #585;
+		}
+		#adresa{
+			padding:10px;
+		}
+		.brzgrade{
+			width:100px;
+		}
 
 
 
@@ -253,7 +337,6 @@ body {
 
 
 
-
 @media only screen and (max-width: 800px){
 	.column{
 		width: 100vw;
@@ -265,6 +348,4 @@ body {
 	}
 	
 	
-	
 	}
-

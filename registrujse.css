@@ -18,8 +18,6 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-
-
 .header {
 	padding-top:10px;
 	background-color:white;
@@ -56,9 +54,7 @@ body {
 	#navigacija{
 		display: flex;
 	}
-	#navigacija >div{
-		position:relative;
-	}
+
 	#navigacija a{
 		text-align: center;
 		display: block;    /*zbog ovoga se moze pedding definisati */
@@ -74,6 +70,7 @@ body {
 		background: lightslategrey;
 		color: white;
 	}
+
 	#navigacija >div >div>a{
 		display: block;
 		padding: 10px 30px;
@@ -137,6 +134,7 @@ body {
 .page .column{
 	height: 100vh;  
 }
+
 #okvir {
  margin: 0 auto;
 }
@@ -144,55 +142,59 @@ body {
 
 
 
-
-
-/*PRVA STRANA*/
-	#aktivista{
+/*STRANICA*/
+	#formular1{
 		text-align:center;
 		color:#ffffff;
-		background:url('img/pozadina5.png');
-		 background-size: cover;
+		background:url('img/pozadina1.png');
+		background-size: cover; 
 		background-attachment:fixed;
+		padding-bottom:50px;
 	}
-	#aktivista h1{
-		font-size: 48pt;
+
+	#formular1 h1{
+		font-size: 40pt;
 		margin-top: 0px;
 		padding-top: 40px;  /*prvo smo sa inspect izracunali koliko treba a onda pisemo ovo*/
 	}
 
-	#mogucnosti{
-		
+	#logovanje {
 		border:1px solid #ffffff;
 		background: #33333350;  /*poslednja dva broja odredjuju koliko nam se element providi*/
-		font-size: 20pt;
+		font-size: 24pt;
 		padding: 40px;
-		padding-bottom:50px;
 		margin-top: 30px;
-		
+		text-align: left;
 		
 	}
-	#mogucnosti div{
+	#logovanje label{
+		padding:12px;
+		padding-bottom:15px;
+	}
+	#logovanje input{
 		padding: 10px;
-		background-color: #ffffff50;
-	}
-	#flexbox{
-		display:flex;
-	}
-	#flexbox p{
-		color: #555;
-	}
-	#flexbox div{
-		flex-grow:1;
+		border: 1px solid #555;
+		border-radius: 5px 5px;
 	}
 
-	#mogucnosti a{
-		display: block;
-		padding: 2px;
-		color: #fff;
-		text-decoration: none;
+	#logovanje button {
+		font-size: 15px;
+		color: #557;
+		font-weight: bold;
+		border-radius: 8px 8px;
+		transition-duration: 0.3s;
+		border: 1px solid black;
+		padding: 12px 20px;
+	} 
+
+	#logovanje button:hover {
+	  background-color:DarkSlateGrey ;
+	  color: #fff;
 	}
-	#mogucnosti a:hover{
-		color: #800000;
+
+	#input-adresa{
+		border: 1px solid #555;
+		border-radius: 5px 5px;
 	}
 
 
@@ -238,7 +240,7 @@ body {
 
 	.red-link{
 		text-decoration: none;
-		color: #dc0101;
+		color: #800000;
 	}
 
 	.red-link:hover{
@@ -253,18 +255,14 @@ body {
 
 
 
-
 @media only screen and (max-width: 800px){
-	.column{
+.column{
 		width: 100vw;
 		padding: 0 20px;
 	}
-	.page .column{
+.page .column{
 		height: auto;
 		padding-bottom: 150px;
 	}
 	
-	
-	
-	}
-
+}

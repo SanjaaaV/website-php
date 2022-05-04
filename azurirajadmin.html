@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="azurirajadmin.css">
+	<title>Administrator-azuriranja</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+<div id="okvir">
+	<div class="header">
+			<div class="column">
+				<div id="logo-i-social">
+					<div id="logo-holder">
+						<img alt="Podeli flajer" src="img/logo.png">    
+					</div>
+					<div id="social-holder">
+						<a href="#">
+							<img alt="facebook" src="img/facebook.svg">
+						</a>
+						<a href="#">
+							<img alt="twitter" src="img/twitter.svg">
+						</a>
+						<a href="#">
+							<img alt="Instagram" src="img/instagram.svg">
+						</a>
+					</div>
+				</div>
+			
+				<nav id="navigacija">
+					<div>
+						<a href="./Naslovna (1).html" >Pocetna</a>
+					</div>
+					<div>
+						<a href="./ulogujse.html">Uloguj se</a>
+					</div>
+					<div>
+						<a href="./navaktivista.html">Aktivista</a>
+						<div>
+							<div class="drop-content">
+							<a href="./flajeriaktivista.html">Flajeri</a>
+							</div>
+							
+							<div class="drop-content">
+								<a class="drop" href="./aktivistaunosi.html">Unesi</a>
+								<div>
+									<a href="./aktivistaunosi.html #unos-zahteva">Zahtev</a>
+									<a href="./aktivistaunosi.html #unos-adreseaktivista">Adrese</a>
+									<a href="./aktivistaunosi.html #unos-brpreostalihflajera">Broj flajera</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div>
+						<a href="./navadmin.html" class="active">Administrator</a>
+						<div>
+							<div class="drop-content">
+							<a href="./flajeriadmin.html">Flajeri</a>
+							</div>
+							<div class="drop-content">
+							<a href="./spisakaktivista.html">Aktivisti</a>
+							</div>
+							<div class="drop-content">
+								<a class="drop" href="./adminunosi.html">Unesi</a>
+								<div>
+									<a href="./adminunosi.html #unos-aktiviste">Aktivistu</a>
+									<a href="./adminunosi.html #unos-flajera">Flajer</a>
+									<a href="./adminunosi.html #unos-ulice">Ulicu</a>
+									<a href="./adminunosi.html #unos-adrese">Adresu</a>
+								</div>
+							</div>
+							<div class="drop-content">
+								<a class="drop" href="#navigacija">Azuriraj</a>
+								<div>
+									<a href="#aktivista">Aktivistu</a>
+									<a href="#flajer">Flajer</a>
+									<a href="#ulica">Adresu</a>
+								</div>
+							</div>
+							<div class="drop-content">
+							<a href="./alociraj.html">Alociraj</a>
+							</div>
+							<div class="drop-content">
+								<a class="drop" href="./odobriadmin.html">Odobri</a>
+								<div>
+									<a href="./odobriadmin.html #aktivista">Aktivistu</a>
+									<a href="./odobriadmin.html #zahtev">Zahtev</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div>
+						<a href="./izlogujse.html">Izloguj se</a>
+					</div>
+				</nav>
+				
+			</div>
+	</div>
+	
+	
+	
+	<div class="page" id="aktivista">
+			<div class="column">
+					<h2>Azuriraj aktivistu</h2>
+					<div id="logovanje">
+						<form action=“azuriraj-aktivistu.php" method="post">
+							<p><b>Spisak aktivista</b></p><br>
+							<ul id="lista-aktivista">
+								<li>aktivista <button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>
+								<li>aktivista <button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>
+								<li>aktivista <button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>
+								<li>aktivista <button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>
+								<li>aktivista <button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>	
+							</ul>
+						</form>
+					</div>
+			
+			</div>
+	</div> 
+	
+	<div class="page" id="flajer">
+			<div class="column">
+					<h2>Azuriraj flajer</h2>
+					<div id="logovanje">
+						<form action=“azuriraj-flajer.php" method="post">
+							<p><b>Spisak flajera</b></p><br>
+							<ul id="lista-flajera">
+								<li>flajer1<button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>
+								<li>flajer2<button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>
+								<li>flajer3<button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>
+								<li>flajer4<button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>
+								<li>flajer5<button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>	
+							</ul>
+						</form>
+					</div>
+			
+			</div>
+	</div>
+	
+	<div class="page" id="ulica">
+			<div class="column">
+					<h2>Flajeri</h2>
+					<div id="logovanje">
+						<form action=“azuriraj-ulicu.php" method="post">
+							<p><b>Azuriraj adresu</b></p><br>
+							<ul id="lista-ulica">
+								<li>ulica 3,24,58<button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>
+								<li>ulica 3,24,58<button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>
+								<li>ulica 3,24,58<button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>
+								<li>ulica 3,24,58<button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>
+								<li>ulica 3,24,58<button type="button">Azuriraj</button>  <button type="button">Obrisi</button></li>	
+							</ul>
+						</form>
+					</div>
+			 
+			</div>
+	</div>
+	
+	
+	<div class="footer">
+			<div class="column">
+				<div class="footer-column" "align-left">
+						<strong>E-mail</strong><br>
+						<a class="red-link" href="mailto:podeli.flajer@gmail.com">podeli.flajer@gmail.com</a><br>
+						<br>
+						<strong>Telefon</strong><br>
+						<p>+381115623965</p>
+						
+				</div>
+				<div class="footer-column" "align-center">
+					&copy; 2022<br>
+				</div>
+				<div class="footer-column" "align-right">
+					<a class="red-link" href="./Naslovna (1).html">Pocetna </a><br>
+					<a class="red-link" href="./izlogujse.html">Izloguj se</a><br>
+				</div>
+			</div>
+		</div>
+
+
+
+</div>
+</body>
+
+</html>
