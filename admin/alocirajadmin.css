@@ -58,6 +58,7 @@ body {
 	}
 	#navigacija >div{
 		position:relative;
+
 	}
 	#navigacija a{
 		text-align: center;
@@ -74,7 +75,35 @@ body {
 		background: lightslategrey;
 		color: white;
 	}
+	#navigacija >div >div>a{
+		display: block;
+		padding: 10px 30px;
+		text-decoration: none;
+		color:darkslategrey;
+		transition: 300ms;
+		
+	}
+	#navigacija >div >div>a:hover{
+		background: lightslategrey;
+		color: white;
+		transition: 150ms;
+		
+	}
+	#navigacija >div >div{
+		display:none;
+		position:absolute;
+		min-width: 150px;
+		background-color: #fff;
+	}
+	#navigacija >div:hover>div{
+		display:block;
+		z-index:1;
+		background:gainsboro;
+	}
 	
+
+
+
 
 
 .column{
@@ -93,8 +122,8 @@ body {
 /*STRANA*/
 	#sadrzaj {
 		border:1px solid #ffffff;
-		background:  #33333350;  /*poslednja dva broja odredjuju koliko nam se element providi*/
-		font-size: 24pt;
+		background: #33333388;  /*poslednja dva broja odredjuju koliko nam se element providi*/
+		font-size: 15pt;
 		padding: 40px;
 		padding-left:150px;
 		margin-top: 30px;
@@ -104,12 +133,13 @@ body {
 	#sadrzaj label{
 		padding:12px;
 		padding-bottom:15px;
-		font-size:20px;
+		
 	}
 	#sadrzaj input{
 		padding: 7px;
 		border: 1px solid #555;
 		border-radius: 5px 5px;
+		margin:3px;
 	}
 
 	#sadrzaj button {
@@ -124,7 +154,7 @@ body {
 	} 
 
 	#sadrzaj button:hover {
-	  background-color:DarkSlateGrey ;
+	  background-color: #000 ;
 	  color: #fff;
 	}
 
@@ -132,7 +162,7 @@ body {
 		#kartica{
 			text-align:center;
 			color:#ffffff;
-			background: URL('img/pozadina1.png');
+			background: URL('img/pozadina5.png');
 			background-size: cover; 
 			background-attachment:fixed;
 		}
@@ -143,10 +173,19 @@ body {
 			margin-top: 0px;
 			padding-top: 60px; 
 		}
+		
 
+		select{
+			margin-bottom:3px;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			border: 1px solid #555;
+			border-radius: 5px 5px;
+			width:300px;
+			
+		}
 		
-		
-		
+		/*za unesiaktivistu*/
 		#input-adresa{
 			width: 200px;
 			height: 60px;
@@ -157,8 +196,7 @@ body {
 			border-radius: 5px 5px;
 		}
 		
-
-
+		
 
 
 /*FUTER*/
@@ -183,7 +221,7 @@ body {
 		flex-basis: 0;
 		padding-top: 20px;
 		padding-bottom:20px;
-		padding-left: 10px;
+		padding-left:10px;
 	}
 
 
@@ -202,7 +240,7 @@ body {
 
 	.red-link{
 		text-decoration: none;
-		color: maroon;
+		color:maroon;
 	}
 
 	.red-link:hover{
@@ -239,6 +277,11 @@ body {
 		flex-direction:column;
 		
 	}
-	
-	
+	#navigacija >div >div{
+		position:relative;
 	}
+	#navigacija >div:hover>div{
+		top:2px;
+	}
+	
+}

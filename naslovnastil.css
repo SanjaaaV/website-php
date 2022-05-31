@@ -74,58 +74,8 @@ body {
 		background: lightslategrey;
 		color: white;
 	}
-	#navigacija >div >div>a{
-		display: block;
-		padding: 10px 30px;
-		text-decoration: none;
-		color:darkslategrey;
-		transition: 300ms;
-		
-	}
-	#navigacija >div >div>a:hover{
-		background: lightslategrey;
-		color: white;
-		transition: 150ms;
-		
-	}
-	#navigacija >div >div{
-		display:none;
-		position:absolute;
-		min-width: 150px;
-		background-color: #fff;
-	}
-	#navigacija >div:hover>div{
-		display:block;
-		z-index:1;
-	}
-	.drop-content{
-		position:relative;
-	}
-	.drop-content >div >a{
-		display: block;
-		padding: 10px 30px;
-		text-decoration: none;
-		color:darkslategrey;
-		transition: 300ms;
-	}
-	.drop-content >div >a:hover{
-		background: lightslategrey;
-		color: white;
-		transition: 150ms;
-	}
-	.drop-content >div {
-		display:none;
-		position:absolute;
-		bottom:0px;
-		left:150px;
-		min-width: 150px;
-		background-color: #fff;
-	}
-	.drop-content:hover div{
-		display:block;
-		z-index:1;
-	}
-
+	
+	
 
 
 
@@ -136,6 +86,9 @@ body {
 }
 .page .column{
 	height: 100vh;  
+}
+#okvir{
+	margin: 0px auto;
 }
 
 
@@ -157,40 +110,43 @@ body {
 		border:1px solid #fff;
 		background: #33333350;  /*poslednja dva broja odredjuju koliko nam se element providi*/
 		font-size: 24pt;
-		padding: 40px;
+		padding: 20px;
 		display:flex;
 	}
 
 		
 	.flex-container >div {
 		border:1px solid #ffffff;
-		text-align:justify;
+		text-align: justify;
 		color:#fff;
 		padding:20px;
-		margin:5px;
+		margin:2px;
 		font-size:20px;
 		
 	}
 
 	#pocetna h1{
-		font-size: 48pt;
+		font-size: 44pt;
 		margin-top: 0px;
 		padding-top: 40px;  /*prvo smo sa inspect izracunali koliko treba a onda pisemo ovo*/
+		padding-bottom: 30px;
 	}
 
 	#c h2,
 	#d h2{
-		font-size:30px;
+		font-size:28px;
 	}
 
 
 
 	#c{
+		
 		display: flex;
 		flex-direction:column;
 	}
 
 	#skrol{
+		
 	  overflow-y:auto;  
 	   height:0px;/* visina je 0 pa se sigurno postavlja scrollbar */
 	   flex:auto;  /* sam div se razvlači koliko može, a višak sadržaja može da
@@ -230,6 +186,7 @@ body {
 		flex-basis: 0;
 		padding-top: 20px;
 		padding-bottom:20px;
+		padding-left:10px;
 	}
 
 
@@ -248,7 +205,7 @@ body {
 
 	.red-link{
 		text-decoration: none;
-		color: #dc0101;
+		color: maroon;
 	}
 
 	.red-link:hover{
@@ -279,16 +236,29 @@ body {
 	}
 	.column{
 		width: 100vw;
-		padding: 0 20px;
+		padding-right:17px;
 	}
-	.page .column{
+
+
+.page .column{
 		height: auto;
+		padding: 0 30px;
 		padding-bottom: 150px;
 	}
 	
-	
-	
+	#sadrzaj {
+		padding-left:70px;
 	}
+	#html-kod, #ulica{
+		max-width:300px;
+	}
+	
+	#navigacija{
+		flex-direction:column;
+		
+	}
+	
+}
 
 
 

@@ -1,0 +1,5 @@
+admin:
+flajeri,aktivisti,azuriraj i odobri koriste css fajl azuririrajaktivistuadmin.css
+
+
+alociraj, unesiadresuadmin i unesiaktivistuadmin koriste fajl alocirajadmin.css

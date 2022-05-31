@@ -74,7 +74,35 @@ body {
 		background: lightslategrey;
 		color: white;
 	}
+	#navigacija >div >div>a{
+		display: block;
+		padding: 10px 30px;
+		text-decoration: none;
+		color:darkslategrey;
+		transition: 300ms;
+		
+	}
+	#navigacija >div >div>a:hover{
+		background: lightslategrey;
+		color: white;
+		transition: 150ms;
+		
+	}
+	#navigacija >div >div{
+		display:none;
+		position:absolute;
+		min-width: 150px;
+		background-color: #fff;
+	}
+	#navigacija >div:hover>div{
+		display:block;
+		z-index:1;
+		background:gainsboro;
+	}
 	
+
+
+
 
 
 .column{
@@ -93,21 +121,21 @@ body {
 /*STRANA*/
 	#sadrzaj {
 		border:1px solid #ffffff;
-		background:  #33333350;  /*poslednja dva broja odredjuju koliko nam se element providi*/
+		background: #33333388;  /*poslednja dva broja odredjuju koliko nam se element providi*/
 		font-size: 24pt;
 		padding: 40px;
 		padding-left:150px;
 		margin-top: 30px;
 		text-align: left;
-		
+		max-height:450px;
+		overflow:auto;
 	}
 	#sadrzaj label{
 		padding:12px;
 		padding-bottom:15px;
-		font-size:20px;
 	}
 	#sadrzaj input{
-		padding: 7px;
+		padding: 10px;
 		border: 1px solid #555;
 		border-radius: 5px 5px;
 	}
@@ -120,11 +148,11 @@ body {
 		transition-duration: 0.3s;
 		border: 1px solid black;
 		padding: 5px 20px;
-		margin-left:20px;
+		margin-left:10px;
 	} 
 
 	#sadrzaj button:hover {
-	  background-color:DarkSlateGrey ;
+	  background-color: #000 ;
 	  color: #fff;
 	}
 
@@ -132,7 +160,7 @@ body {
 		#kartica{
 			text-align:center;
 			color:#ffffff;
-			background: URL('img/pozadina1.png');
+			background: URL('img/pozadina5.png');
 			background-size: cover; 
 			background-attachment:fixed;
 		}
@@ -143,21 +171,16 @@ body {
 			margin-top: 0px;
 			padding-top: 60px; 
 		}
-
 		
-		
-		
-		#input-adresa{
-			width: 200px;
-			height: 60px;
-			font-size: 14px;
-			margin-top: 12px;
-			padding: 7px;
-			border: 1px solid #555;
-			border-radius: 5px 5px;
+		ul li{
+			list-style: number;
+			text-align:left;
+			font-size: 23px;
+		}
+		ul li label{
+			font-size:20px;
 		}
 		
-
 
 
 
@@ -183,7 +206,7 @@ body {
 		flex-basis: 0;
 		padding-top: 20px;
 		padding-bottom:20px;
-		padding-left: 10px;
+		padding-left:10px;
 	}
 
 
@@ -219,6 +242,7 @@ body {
 	.column{
 		width: 100vw;
 		padding-right:17px;
+		font-size: 
 	}
 
 
@@ -239,6 +263,12 @@ body {
 		flex-direction:column;
 		
 	}
-	
-	
+	#navigacija >div >div{
+		position:relative;
 	}
+	#navigacija >div:hover>div{
+		top:2px;
+	}
+	
+	
+}

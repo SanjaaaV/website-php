@@ -74,7 +74,34 @@ body {
 		background: lightslategrey;
 		color: white;
 	}
+	#navigacija >div >div>a{
+		display: block;
+		padding: 10px 30px;
+		text-decoration: none;
+		color:darkslategrey;
+		transition: 300ms;
+		
+	}
+	#navigacija >div >div>a:hover{
+		background: lightslategrey;
+		color: white;
+		transition: 150ms;
+		
+	}
+	#navigacija >div >div{
+		display:none;
+		position:absolute;
+		min-width: 150px;
+		background-color: #fff;
+	}
+	#navigacija >div:hover>div{
+		display:block;
+		z-index:1;
+		background:gainsboro;
+	}
 	
+
+
 
 
 .column{
@@ -84,79 +111,79 @@ body {
 .page .column{
 	height: 100vh;  
 }
-#okvir {
- margin: 0 auto;
+#okvir{
+	margin: 0px auto;
 }
 
 
+/*PRVA STRANA*/
+	#pocetna{
+		text-align:center;
+		color:#ffffff;
+		background:url('img/pozadina1.png');
+		background-size: cover; 
+		background-attachment:fixed;
+	}
 
-/*STRANA*/
-	#sadrzaj {
-		border:1px solid #ffffff;
-		background:  #33333350;  /*poslednja dva broja odredjuju koliko nam se element providi*/
+
+	.flex-container {
+		flex-grow: 1;
+		display: flex;
+		justify-content:space-evenly;
+		flex-direction:row;
+		border:1px solid #fff;
+		background: #33333350;  /*poslednja dva broja odredjuju koliko nam se element providi*/
 		font-size: 24pt;
-		padding: 40px;
-		padding-left:150px;
-		margin-top: 30px;
-		text-align: left;
-		
+		padding: 20px;
+		display:flex;
 	}
-	#sadrzaj label{
-		padding:12px;
-		padding-bottom:15px;
+
+		
+	.flex-container >div {
+		border:1px solid #ffffff;
+		text-align: justify;
+		color:#fff;
+		padding:20px;
+		margin:2px;
 		font-size:20px;
-	}
-	#sadrzaj input{
-		padding: 7px;
-		border: 1px solid #555;
-		border-radius: 5px 5px;
+		
 	}
 
-	#sadrzaj button {
-		font-size: 15px;
-		color: #557;
-		font-weight: bold;
-		border-radius: 8px 8px;
-		transition-duration: 0.3s;
-		border: 1px solid black;
-		padding: 5px 20px;
-		margin-left:20px;
-	} 
+	#pocetna h1{
+		font-size: 44pt;
+		margin-top: 0px;
+		padding-top: 40px;  /*prvo smo sa inspect izracunali koliko treba a onda pisemo ovo*/
+		padding-bottom: 30px;
+	}
 
-	#sadrzaj button:hover {
-	  background-color:DarkSlateGrey ;
-	  color: #fff;
+	#c h2,
+	#d h2{
+		font-size:28px;
 	}
 
 
-		#kartica{
-			text-align:center;
-			color:#ffffff;
-			background: URL('img/pozadina1.png');
-			background-size: cover; 
-			background-attachment:fixed;
-		}
 
-		#kartica h1{
-			color:	#fff;
-			font-size: 38pt;
-			margin-top: 0px;
-			padding-top: 60px; 
-		}
+	#c{
+		
+		display: flex;
+		flex-direction:column;
+	}
 
+	#skrol{
 		
-		
-		
-		#input-adresa{
-			width: 200px;
-			height: 60px;
-			font-size: 14px;
-			margin-top: 12px;
-			padding: 7px;
-			border: 1px solid #555;
-			border-radius: 5px 5px;
-		}
-		
+	  overflow-y:auto;  
+	   height:0px;/* visina je 0 pa se sigurno postavlja scrollbar */
+	   flex:auto;  /* sam div se razvlači koliko može, a višak sadržaja može da
+	se vidi skrolovanjem */
+	  padding: 30px ;
+	}
+	ul li{
+		list-style:number;
+	}
+	#d {
+		align-self:flex-start;
+		max-width:500px;
+	}
 
 
 
@@ -183,7 +210,7 @@ body {
 		flex-basis: 0;
 		padding-top: 20px;
 		padding-bottom:20px;
-		padding-left: 10px;
+		padding-left:10px;
 	}
 
 
@@ -213,9 +240,24 @@ body {
 		font-size: 13px;
 	}
 
+	#okvir {
+	 margin: 0 auto;
+	}
+
+
+
 
 
 @media only screen and (max-width: 800px){
+	.flex-container{
+			flex-direction: column;
+			padding-top:30px;
+			padding-bottom:20px;
+		
+		}
+	#skrol{
+		height: 150px;
+	}
 	.column{
 		width: 100vw;
 		padding-right:17px;
@@ -239,6 +281,12 @@ body {
 		flex-direction:column;
 		
 	}
-	
-	
+    
+	#navigacija >div >div{
+		position:relative;
 	}
+	#navigacija >div:hover>div{
+		top:2px;
+	}
+	
+}
