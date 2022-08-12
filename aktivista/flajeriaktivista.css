@@ -141,6 +141,7 @@ body {
 		border-radius: 5px 5px;
 		margin:3px;
 	}
+	
 	/*#sadrzaj {
 		border:1px solid #ffffff;
 		background:  #33333350;  /*poslednja dva broja odredjuju koliko nam se element providi
@@ -202,6 +203,7 @@ body {
 			list-style: none;
 			text-align:left;
 			font-size: 22px;
+	
 		}
 		ul li label{
 			font-size:22px;

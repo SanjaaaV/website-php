@@ -6,10 +6,15 @@ session_start();
 <head>
 	<link rel="stylesheet" type="text/css" href="unesiulicuadmin.css">
 	<title>Administrator</title>
+	<script>
+			function prikaziDatumIVreme(){
+				document.getElementById("vremeIdatum").innerHTML=Date();
+			}
+		</script>
 	<meta charset="utf-8">
 </head>
 
-<body>
+<body onLoad="prikaziDatumIVreme()">
 <div id="okvir">
 	<div class="header">
 			<div class="column">
@@ -30,12 +35,23 @@ session_start();
 			<div class="column">
 					<h1>Unesi ulicu</h1>
 					<div id="sadrzaj">
-						<form action=“unesi-ulicu.php" method="post">
+						<form name="unesi-ulicu.php" method="post">
 						
 						<label for="ulica">Ulica:   </label><br>
-						<input id="ulica" type="text" name="Ulica" required><br>
+						<input id="ulica" type="text" name="ulica" required><br>
 						<br>
-						<button type="submit">Dodaj ulicu</button>
+						<button type="submit" name="unesiulicu">Dodaj ulicu</button>
+
+						<?php
+							include "../funkcije.php";
+							if (isset ($_POST['unesiulicu'])){
+								Funkcije::unesiUlicu($_POST['ulica']);
+								echo "Želite da unesete adresu?  ", '<a href="unesiadresuadmin.php"  style="text-decoration:underline; color: #fff;" >', "Unesi adresu","</a>";
+							}
+						?>
+
+
+
 						</form>
 					</div>
 			

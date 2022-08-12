@@ -6,10 +6,15 @@ session_start();
 <head>
 	<link rel="stylesheet" type="text/css" href="azurirajaktivistuadmin.css">
 	<title>Administrator</title>
+	<script>
+			function prikaziDatumIVreme(){
+				document.getElementById("vremeIdatum").innerHTML=Date();
+			}
+		</script>
 	<meta charset="utf-8">
 </head>
 
-<body>
+<body onLoad="prikaziDatumIVreme()">
 <div id="okvir">
 	<div class="header">
 			<div class="column">

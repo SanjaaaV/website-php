@@ -14,7 +14,7 @@ if(isset($_POST['sifra'])) {
  $opcije = ['cost' => 10];
  $sifrovanaLozinka= password_hash($sifra, PASSWORD_DEFAULT,$opcije);
 
- $upit="INSERT INTO flajerisanje.aktivisti (email,sifra,ime,prezime,telefon) VALUES ('$email','$sifrovanaLozinka','$ime','$prezime','$telefon')";
+ $upit="INSERT INTO flajerisanje.aktivisti (email,sifra,ime,prezime,telefon, odobren) VALUES ('$email','$sifrovanaLozinka','$ime','$prezime','$telefon','1')";
 
  $rez=$veza->query($upit);
  $veza->close();

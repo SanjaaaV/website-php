@@ -6,10 +6,15 @@ session_start();
 <head>
 	<link rel="stylesheet" type="text/css" href="flajeriaktivista.css">
 	<title>Aktivista</title>
+	<script>
+			function prikaziDatumIVreme(){
+				document.getElementById("vremeIdatum").innerHTML=Date();
+			}
+		</script>
 	<meta charset="utf-8">
 </head>
 
-<body>
+<body onLoad="prikaziDatumIVreme()">
 <div id="okvir">
 	<div class="header">
 			<div class="column">
@@ -40,7 +45,7 @@ session_start();
 					</div>
 
 					<div>
-						<a href="../loguot.php">Izloguj se</a>
+						<a href="../logout.php">Izloguj se</a>
 					</div>
 				</nav>
 				
@@ -51,26 +56,38 @@ session_start();
 			<div class="column">
 					<h1>Vaši flajeri</h1>
 					<div id="sadrzaj">
-						<form action=“flajer-aktivista.php" method="post">
+						<form name="flajer-aktivista.php" method="post">
 							<label><b>Odaberite jedan flajer:</b></label><br>
 							<ul>
-							<li><input type="radio" name="kategorija" value="1"> Flajer1<br></li>
-							<li><input type="radio" name="kategorija" value="2"> Flajer2<br></li>
-							<li><input type="radio" name="kategorija" value="3"> Flajer3<br></li>
-							<li><input type="radio" name="kategorija" value="4"> Flajer4<br></li>
-							<li><input type="radio" name="kategorija" value="5"> Flajer5<br></li>
-							<li><input type="radio" name="kategorija" value="1"> Flajer1<br></li>
-							<li><input type="radio" name="kategorija" value="2"> Flajer2<br></li>
-							<li><input type="radio" name="kategorija" value="3"> Flajer3<br></li>
-							<li><input type="radio" name="kategorija" value="4"> Flajer4<br></li>
-							<li><input type="radio" name="kategorija" value="5"> Flajer5<br></li>
-							<li><input type="radio" name="kategorija" value="1"> Flajer1<br></li>
-							<li><input type="radio" name="kategorija" value="2"> Flajer2<br></li>
-							<li><input type="radio" name="kategorija" value="3"> Flajer3<br></li>
-							<li><input type="radio" name="kategorija" value="4"> Flajer4<br></li>
+							<?php 
+							include "../funkcije.php";
+                                    $trenutniKor = Funkcije::getTrenutnogKorisnika('user');
+                                    $flajeri= Funkcije::getSveFlajereKorisnika($trenutniKor['IDaktiviste'], 1);
+									$redniBroj=1;
+                                    if (sizeof($flajeri)>0){
+                                        foreach ($flajeri as $f) {
+                                            $flajer = Funkcije::getFlajer($f['IDflajera']);
+                                            echo '<li>';
+                                                 echo $redniBroj,". ", $flajer['naziv'], '<button name="trenutniFlajer" type="submit"  value="'.$flajer['IDflajera'].'"> Izaberi </button> ';
+                                            echo '</li>';
+											$redniBroj++;
+                                         }
+                                    }
+                                    else {
+                                        echo "Nema flajera.";
+                                    }
+                                 ?>
 							</ul><br>
-							<button type="submit">Prosledi</button>
+							<?php 
+                             if(isset($_POST['trenutniFlajer'])){
+                                $IDflaj = $_POST['trenutniFlajer'];
+                                $izabraniflajer = Funkcije:: getFlajer($IDflaj);
+								$_SESSION['trenutniFlajer'] =  $izabraniflajer ;
+                                echo "Izabran je flajer : ".$izabraniflajer['naziv']." ";
+                                }
+                         	?>
 						</form>
+						
 					</div>
 			
 			</div>

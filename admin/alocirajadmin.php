@@ -6,10 +6,15 @@ session_start();
 <head>
 	<link rel="stylesheet" type="text/css" href="alocirajadmin.css">
 	<title>Administrator</title>
+	<script>
+			function prikaziDatumIVreme(){
+				document.getElementById("vremeIdatum").innerHTML=Date();
+			}
+		</script>
 	<meta charset="utf-8">
 </head>
 
-<body>
+<body onLoad="prikaziDatumIVreme()">
 <div id="okvir">
 	<div class="header">
 			<div class="column">
@@ -63,45 +68,64 @@ session_start();
 			<div class="column">
 					<h1>Alociranje</h1>
 					<div id="sadrzaj">
-						<form action=“alokacija.php" method="post">
+						<form name="alokacija.php" method="post">
 							<label for="input-flajer">Flajer:</label>
-							<select name="flajer" id="input-flajer">
-								<option value="0001">flajer1</option>
-								<option value="0002">flajer2</option>
-								<option value="0003">flajer3</option>
-								<option value="0004">flajer4</option>
-								<option value="0005">flajer5</option>
-								<option value="0006">flajer6</option>
+							<select name="trenutniflajer" id="input-flajer">
+							<?php
+							include "../funkcije.php";
+                                        $flajeri = Funkcije::getSveFlajereAdmin();
+                                        $izabraniFlajer =$_SESSION['izabraniFlaj'];
+                                        $_SESSION['izabraniFlaj']=null;
+                                        foreach ($flajeri as $f) {
+                                            $selected = "";
+                                            if ($f['naziv'] == $izabraniFlajer){
+                                                $selected = " selected";
+                                            }
+                                            echo "<option value='$f[IDflajera]' ".$selected.">".$f['naziv']."</option>";
+                                        }
+                                    ?>
 							</select><br>
 							<label for="input-aktivista">Aktivista:</label>
 							<select name="aktivista" id="input-aktivista">
-								<option value="0001">aktivista1</option>
-								<option value="0002">aktivista2</option>
-								<option value="0003">aktivista3</option>
-								<option value="0004">aktivista4</option>
-								<option value="0005">aktivista5</option>
-								<option value="0006">aktivista6</option>
+							<?php
+                                        $activisti = Funkcije::getSveAktiviste(1);
+                                        foreach ($activisti as $a) {
+                                            echo "<option value='$a[IDaktiviste]'>".$a['ime']." ".$a['prezime']."</option>";
+                                        }
+                                    ?>
 							</select><br>
 							
 							<label for="input-ulica">Ulica:</label>
 							<select name="ulica" id="input-ulica">
-								<option value="0001">ulica1</option>
-								<option value="0002">ulica2</option>
-								<option value="0003">ulica3</option>
-								<option value="0004">ulica4</option>
-								<option value="0005">ulica5</option>
-								<option value="0006">ulica6</option>
+							<?php
+									$ulice= Funkcije::getMoguceUliceZaZahtev();
+                                    foreach ($ulice as $ulica) {
+										$flajer=Funkcije::getFlajer($ulica['IDflajera']);
+                                        echo"<option value='$ulica[IDulice]'>"  ,"$ulica[ulica]"," (","$ulica[nedodeljeniBrojevi]",")","  za  ","$flajer[naziv]", "</option>";}
+								?>	
 							</select><br>
 							
 							<label>Brojevi zgrada odvojeni zarezom:</label>
-							<input type="text" name="brojz1" class="brzgrade"><br>
+							<input type="text" name="brojevizgrada" class="brzgrade"><br>
 								
 							<label for="broj">Broj flajera:</label>
 							<input type="number" step="1" id="broj"
-								min="0"  value="0"  required><br><br>
+								min="0"  value="0" name="brojflajera" required><br><br>
 								
-							<button type="submit">Alociraj</button>
+							<button type="submit" name="alokacija">Alociraj</button>
 							
+							<?php
+                            if(isset($_POST['alokacija'])){
+                                $ispravan= Funkcije::proveraIspravnostiZahteva();
+                                if (!$ispravan['ispravanZahtev']){
+                                   echo $ispravan['ispis'];
+                                }
+                                else {
+									Funkcije::dodajAdresuZahtevAdmin( $_POST['trenutniflajer'], $_POST['ulica'], $_POST['brojevizgrada'], $_POST['aktivista'], $_POST['brojflajera']);
+									echo "Alokacija uspešna.";
+                                }
+                            }
+                        ?>
 							
 							
 							

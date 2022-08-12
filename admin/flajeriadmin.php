@@ -6,10 +6,15 @@ session_start();
 <head>
 	<link rel="stylesheet" type="text/css" href="azurirajaktivistuadmin.css">
 	<title>Administrator</title>
+	<script>
+			function prikaziDatumIVreme(){
+				document.getElementById("vremeIdatum").innerHTML=Date();
+			}
+		</script>
 	<meta charset="utf-8">
 </head>
 
-<body>
+<body onLoad="prikaziDatumIVreme()">
 <div id="okvir">
 	<div class="header">
 			<div class="column">
@@ -61,21 +66,40 @@ session_start();
 			<div class="column">
 					<h1>Flajeri</h1>
 					<div id="sadrzaj">
-						<form action=“spisak-flajera.php" method="post">
-							<p><b>Spisak flajera</b></p><br>
+						<form name="spisak-flajera.php" method="post">
+							<p><b>Flajer(broj preostalih flajera)</b></p><br>
 							<ul id="lista-flajera">
-								<li>flajer1  <label>Br.zgrada: 8 </label><label> Br.flajera: 54</label><button type="submit">Ažuriraj</button>  <button type="submit">Alociraj</button></li>
-								<li>flajer2  <label>Br.zgrada: 8 </label><label> Br.flajera: 54</label><button type="submit">Ažuriraj</button>  <button type="submit">Alociraj</button></li>
-								<li>flajer3  <label>Br.zgrada: 8 </label><label> Br.flajera: 54</label><button type="submit">Ažuriraj</button>  <button type="submit">Alociraj</button></li>
-								<li>flajer4  <label>Br.zgrada: 8 </label><label> Br.flajera: 54</label><button type="submit">Ažuriraj</button>  <button type="submit">Alociraj</button></li>
-								<li>flajer5  <label>Br.zgrada: 8 </label><label> Br.flajera: 54</label><button type="submit">Ažuriraj</button>  <button type="submit">Alociraj</button></li>
-								<li>flajer1  <label>Br.zgrada: 8 </label><label> Br.flajera: 54</label><button type="submit">Ažuriraj</button>  <button type="submit">Alociraj</button></li>
-								<li>flajer2  <label>Br.zgrada: 8 </label><label> Br.flajera: 54</label><button type="submit">Ažuriraj</button>  <button type="submit">Alociraj</button></li>
-								<li>flajer3  <label>Br.zgrada: 8 </label><label> Br.flajera: 54</label><button type="submit">Ažuriraj</button>  <button type="submit">Alociraj</button></li>
-								<li>flajer4  <label>Br.zgrada: 8 </label><label> Br.flajera: 54</label><button type="submit">Ažuriraj</button>  <button type="submit">Alociraj</button></li>
-								<li>flajer5  <label>Br.zgrada: 8 </label><label> Br.flajera: 54</label><button type="submit">Ažuriraj</button>  <button type="submit">Alociraj</button></li>		
-							
+							<?php 
+							include "../funkcije.php";
+                                    //$trenutniKor = Funkcije::getTrenutnogKorisnika('user');
+                                    $flajeri= Funkcije::getSveFlajereAdmin();
+                                    if (sizeof($flajeri)>0){
+                                        foreach ($flajeri as $f) {
+                                            echo '<li>';
+                                                 echo ' ', "<a href=\"".$f['PDFFajl']."\"  style='text-decoration:none; color: #fff;' >", $f['naziv'],' (', $f['brojPreostalihFlajera'],') ', "</a>", '<button name="azuriraj" type="submit"  value="'.$f['IDflajera'].'"> Ažuriraj </button> ', '<button name="alociraj" type="submit"  value="'.$f['IDflajera'].'"> Alociraj </button> ';
+                                            echo '</li>';
+                                         }
+                                    }
+                                    else {
+                                        echo "Nema flajera.";
+                                    }
+                                 ?>
 							</ul>
+							<?php 
+                                if(isset($_POST['alociraj'])){
+                                    $IDflaj = $_POST['alociraj'];
+                                    $flajer =Funkcije::getFlajer($IDflaj);
+                                    $_SESSION['izabraniFlaj']= $flajer['naziv'];
+                                    echo "<script> location.href='alocirajadmin.php'; </script>";
+                                }
+
+								if(isset($_POST['azuriraj'])){
+                                    $IDflaj = $_POST['azuriraj'];
+                                    $flajer =Funkcije::getFlajer($IDflaj);
+                                    $_SESSION['izabraniFlaj']= $flajer['naziv'];
+                                    echo "<script> location.href='azurirajflajeradmin.php'; </script>";
+                                }
+                            ?>
 						</form>
 					</div>
 			

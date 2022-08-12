@@ -6,10 +6,15 @@ session_start();
 <head>
 	<link rel="stylesheet" type="text/css" href="naslovnastil.css">
 	<title>Deljenje flajera</title>
+		<script>
+			function prikaziDatumIVreme(){
+				document.getElementById("vremeIdatum").innerHTML=Date();
+			}
+		</script>
 	<meta charset="utf-8">
 </head>
 
-<body>
+<body onLoad="prikaziDatumIVreme()">
 <div id="okvir">
 	<div class="header">
 			<div class="column">
@@ -40,16 +45,21 @@ session_start();
 							<div><h2>Javni flajeri</h2></div>
 							<div id="skrol">
 								<ul id="lista-flajera">
-									<li>flajer1 popusti</li>
-									<li>flajer2 popusti</li>
-									<li>flajer3 popusti</li>
-									<li>flajer4 popusti</li>
-									<li>flajer5 popusti</li>	
-									<li>flajer1 popusti</li>
-									<li>flajer2 popusti</li>
-									<li>flajer3 popusti</li>
-									<li>flajer4 popusti</li>
-									<li>flajer5 popusti</li>
+								<?php 
+									include 'funkcije.php';
+               						$flyers =  Funkcije::getSveFlajere(1);
+              						// Helper::setSession('publicFlyers', $flyers);
+              						 if (sizeof($flyers)>0){
+                  						 foreach ($flyers as $flyer) {
+                       						echo '<li>';
+                       						echo file_get_contents($flyer['HTMLfajl']);
+                       						echo '</li>';
+                   						 }
+              						 }
+              						// else {
+                  						// Helper::message('Nema javnih flajera');
+               						//}
+           						 ?>
 								</ul>
 							</div>
 						</div>

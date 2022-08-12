@@ -21,6 +21,6 @@
 					</div>
 
 					<div>
-						<a href="../loguot.php">Izloguj se</a>
+						<a href="../logout.php">Izloguj se</a>
 					</div>
 </nav>

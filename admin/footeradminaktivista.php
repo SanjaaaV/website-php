@@ -10,6 +10,7 @@
 				</div>
 				<div class="footer-column" "align-center">
 					&copy; 2022<br>
+					<p id="vremeIdatum"></p>
 				</div>
 				<div class="footer-column" "align-right">
 					<a class="red-link" href="../logout.php">Izloguj se</a><br>
